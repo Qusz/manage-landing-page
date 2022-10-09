@@ -101,6 +101,33 @@ html {
   color: hsl(227deg, 12%, 61%);
 }
 
+.card-list__title {
+  font-family: "Vietnam-700";
+  font-size: 1.2em;
+  color: hsl(233deg, 12%, 13%);
+}
+.card-list__number {
+  font-family: "Vietnam-700";
+  font-size: 1.2em;
+  color: hsl(0deg, 0%, 98%);
+}
+.card-list__body {
+  font-family: "Vietnam-400";
+  font-size: 1em;
+  color: hsl(227deg, 12%, 61%);
+}
+
+.card-feedback__username {
+  font-family: "Vietnam-700";
+  font-size: 1.2em;
+  color: hsl(233deg, 12%, 13%);
+}
+.card-feedback__body {
+  font-family: "Vietnam-400";
+  font-size: 1em;
+  color: hsl(227deg, 12%, 61%);
+}
+
 .btn-primary {
   padding: 1rem 2rem;
   text-align: center;
@@ -145,9 +172,59 @@ html {
   margin-top: 2rem;
 }
 
+.card-list {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "number title" "bottom bottom";
+}
+.card-list__number {
+  grid-area: number;
+  align-self: start;
+  justify-self: start;
+  background-color: hsl(12deg, 88%, 59%);
+  border-radius: 20px;
+  padding: 3px 20px;
+  text-align: center;
+  z-index: 2;
+}
+.card-list__title {
+  grid-area: title;
+  align-self: center;
+  background-color: hsl(13deg, 100%, 96%);
+  border-radius: 20px;
+  padding: 2px 15px 2px 30px;
+  margin-left: -60px;
+}
+.card-list__body {
+  grid-area: bottom;
+}
+
+.card-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
 @media screen and (min-width: 1024px) {
   .card-main {
     align-items: flex-start;
     text-align: left;
+  }
+  .card-list {
+    grid-template-areas: "number title" "number body";
+  }
+  .card-list__number {
+    grid-area: number;
+  }
+  .card-list__title {
+    grid-area: title;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  .card-list__body {
+    grid-area: body;
   }
 }

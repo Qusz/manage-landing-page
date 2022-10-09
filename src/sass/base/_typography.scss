@@ -41,3 +41,37 @@ html {
     color: $clr-neutral-blue--light;
   }
 }
+
+.card-list {
+  &__title {
+    font-family: $ff-700;
+    font-size: $fs-s;
+    color: $clr-neutral-blue--dark
+  }
+
+  &__number {
+    font-family: $ff-700;
+    font-size: $fs-s;
+    color: $clr-neutral-white;
+  }
+
+  &__body {
+    font-family: $ff-400;
+    font-size: $fs-xs;
+    color: $clr-neutral-blue--light;
+  }
+}
+
+.card-feedback {
+  &__username {
+    font-family: $ff-700;
+    font-size: $fs-s;
+    color: $clr-neutral-blue--dark;
+  }
+
+  &__body {
+    font-family: $ff-400;
+    font-size: $fs-xs;
+    color: $clr-neutral-blue--light;
+  }
+} 
