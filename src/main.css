@@ -81,3 +81,43 @@ select {
     scroll-behavior: auto !important;
   }
 }
+html {
+  font-size: 16px;
+}
+
+.btn {
+  font-family: "Vietnam-500";
+  font-size: 1em;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 5rem;
+  background-color: hsl(12deg, 88%, 59%);
+  color: hsl(0deg, 0%, 98%);
+  -webkit-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  -moz-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  transition: 0.3s ease;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: #f58266;
+  color: white;
+}
+
+.btn-neutral {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 5rem;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(12deg, 88%, 59%);
+  -webkit-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  -moz-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  transition: 0.3s ease;
+}
+.btn-neutral:hover, .btn-neutral:active {
+  background-color: white;
+  color: #f79a82;
+}
