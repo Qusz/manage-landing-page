@@ -1,19 +1,19 @@
 @use '../base/' as *;
 
-
-
 .navbar {
 
   &__wrapper {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     position: relative;
   }
 
   &__items {
     visibility: hidden;
+    max-height: 0px;
     opacity: 0;
-
+    overflow: hidden;
     text-align: center;
   }
 
@@ -37,20 +37,24 @@
 
     opacity: 1;
     visibility: visible;
-    transition: visibility .3s, opacity .6s;
+    transition: visibility .3s, opacity .8s;
+    animation: slide 2s ease forwards;
   }
 
   &__item {
-    transition: .2s ease;
 
-      &:not(:first-child) {
-        margin-top: $spacer-s;
-      }
+    &:not(:first-child) {
+      margin-top: $spacer-s;
+    }
+    
+    a {
+      transition: .2s ease;
+    }
 
-      &:hover,
-      &:active {
-        color: $clr-accent;
-      }
+    a:hover,
+    a:active {
+      color: $clr-accent;
+    }
   }
 
   &__hamburger {
@@ -69,7 +73,6 @@
         width: 33px;
         height: 4px;
         margin-bottom: 5px;
-        position: relative;
 
         background-color: $clr-neutral-blue--dark;
         z-index: 1;
@@ -95,19 +98,65 @@
   &__hamburger.is-active span:nth-child(3) {
     transform: translate(-3px, 3px) rotate(-45deg);
   }
+
+  &__button {
+    display: none;
+  }
 }
 
 .body.is-active {
-  background-color: rgba(0, 0, 0, 0.3);
-  animation: show-nav .2s ease;
+  animation: darken-body .8s ease forwards;
 }
 
-@keyframes show-nav {
-  0% {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
 
-  100% {
-    background-color: rgba(0, 0, 0, 0.3);
+
+//* ==============
+//* Animations
+//* ==============
+
+@keyframes darken-body {
+  from {background-color: rgba(0, 0, 0, 0.1);}
+  to {background-color: rgba(0, 0, 0, 0.3);}
+}
+
+@keyframes slide {
+  from {max-height: 0px;}
+  to {max-height: 800px}
+}
+
+
+
+//* ============
+//* Mobile
+//* ============
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+
+    &__wrapper {
+      align-items: center;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__items {
+      visibility: visible;
+      opacity: 1;
+      max-height: inherit;
+      display: flex;
+      gap: 20px;
+    }
+
+    &__item {
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+
+    &__button {
+      display: block;
+    }
   }
 }
