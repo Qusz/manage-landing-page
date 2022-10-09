@@ -1,1 +1,113 @@
 @use '../base/' as *;
+
+
+
+.navbar {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__items {
+    visibility: hidden;
+    opacity: 0;
+
+    text-align: center;
+  }
+
+  &__items.is-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    width: clamp(200px, 25rem, 85vw);
+
+    background-color: $clr-neutral-white;
+    padding-block: $spacer-m;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+    opacity: 1;
+    visibility: visible;
+    transition: visibility .3s, opacity .6s;
+  }
+
+  &__item {
+    transition: .2s ease;
+
+      &:not(:first-child) {
+        margin-top: $spacer-s;
+      }
+
+      &:hover,
+      &:active {
+        color: $clr-accent;
+      }
+  }
+
+  &__hamburger {
+    align-self: flex-start;
+
+    cursor: pointer;
+
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+      span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background-color: $clr-neutral-blue--dark;
+        z-index: 1;
+
+        transform-origin: 0 0;
+        transition: 0.4s;
+      }
+
+      &:hover span {
+        background-color: $clr-accent;
+      }
+  }
+
+  &__hamburger.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+  }
+
+  &__hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  &__hamburger.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+  }
+}
+
+.body.is-active {
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: show-nav .2s ease;
+}
+
+@keyframes show-nav {
+  0% {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

@@ -23,6 +23,15 @@ html {
 //* Components
 //* ==================
 
+
+.navbar {
+  &__items {
+    font-family: $ff-700;
+    font-size: $fs-xs;
+    color: $clr-neutral-blue--dark;
+  }
+}
+
 .btn {
   font-family: $ff-500;
   font-size: $fs-xs;
@@ -46,7 +55,7 @@ html {
   &__title {
     font-family: $ff-700;
     font-size: $fs-s;
-    color: $clr-neutral-blue--dark
+    color: $clr-neutral-blue--dark;
   }
 
   &__number {
