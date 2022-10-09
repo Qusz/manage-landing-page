@@ -1,6 +1,7 @@
+@use './colors' as *;
 
 $fs-xl: 4.5em;
-$fs-l: 3.5em;
+$fs-l: 3em;
 $fs-m: 2em;
 $fs-s: 1.2em;
 $fs-xs: 1em;
@@ -25,4 +26,18 @@ html {
 .btn {
   font-family: $ff-500;
   font-size: $fs-xs;
+}
+
+.card-main {
+  &__title {
+    font-family: $ff-500;
+    font-size: $fs-l;
+    color: $clr-neutral-blue--dark;
+  }
+
+  &__body {
+    font-family: $ff-400;
+    font-size: $fs-s;
+    color: $clr-neutral-blue--light;
+  }
 }

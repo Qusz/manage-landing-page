@@ -90,6 +90,17 @@ html {
   font-size: 1em;
 }
 
+.card-main__title {
+  font-family: "Vietnam-500";
+  font-size: 3em;
+  color: hsl(233deg, 12%, 13%);
+}
+.card-main__body {
+  font-family: "Vietnam-400";
+  font-size: 1.2em;
+  color: hsl(227deg, 12%, 61%);
+}
+
 .btn-primary {
   padding: 1rem 2rem;
   text-align: center;
@@ -120,4 +131,23 @@ html {
 .btn-neutral:hover, .btn-neutral:active {
   background-color: white;
   color: #f79a82;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.card-main__button {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-main {
+    align-items: flex-start;
+    text-align: left;
+  }
 }

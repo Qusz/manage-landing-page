@@ -1,1 +1,21 @@
 @use '../base/' as *;
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: $spacer-xs;
+
+    &__button {
+      margin-top: $spacer-s;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-main {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
