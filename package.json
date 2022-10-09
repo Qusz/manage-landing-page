@@ -2,11 +2,11 @@
   "name": "manage-landing-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "author": "",
   "license": "MIT",
   "scripts": {
-    "compile": "sass --watch --no-source-map ./src/sass/main.scss ./src/main.css"
+    "compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css"
   },
   "dependencies": {
     "sass": "^1.55.0"
