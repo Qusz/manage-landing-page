@@ -1,3 +1,15 @@
+.container {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: "Vietnam-400";
   src: url("/assets/fonts/BeVietnamPro-Regular.ttf");
@@ -147,6 +159,7 @@ html {
   -webkit-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
   -moz-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
   box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  cursor: pointer;
   transition: 0.3s ease;
 }
 .btn-accent:hover, .btn-accent:active {
@@ -163,6 +176,7 @@ html {
   -webkit-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
   -moz-box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
   box-shadow: 0px 13px 14px -6px rgba(34, 60, 80, 0.3);
+  cursor: pointer;
   transition: 0.3s ease;
 }
 .btn-neutral:hover, .btn-neutral:active {
