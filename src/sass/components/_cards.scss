@@ -13,7 +13,7 @@
     }
 }
 
-
+//TODO Remake the card w/ position absolute
 .card-list {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -37,11 +37,12 @@
         &__title {
           grid-area: title;
           align-self: center;
+          
 
           background-color: $clr-neutral-pale;
           border-radius: 20px;
-          padding: 2px 15px 2px 30px;
-          margin-left: -60px;
+          padding: 2px 0 2px 30px;
+          margin-left: -20px;
  
         }
 

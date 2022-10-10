@@ -15,6 +15,57 @@ html {
   font-size: 16px;
 }
 
+//* ==================
+//* Layout
+//* ==================
+
+.feedback {
+  &__header {
+    font-family: $ff-700;
+    font-size: $fs-m;
+    color: $clr-neutral-blue--dark;
+  }
+}
+
+.cta {
+  &__header {
+    font-family: $ff-700;
+    font-size: $fs-m;
+    color: $clr-neutral-white; 
+  }
+}
+
+.footer {
+  &__links-wrapper {
+    font-family: $ff-500;
+    font-size: $fs-xs;
+    color: $clr-neutral-white;
+  }
+
+  &__link {
+    a {
+      cursor: pointer;
+      transition: .2s ease;
+  
+        &:hover,
+        &:active {
+          color: $clr-accent;
+        }
+    }
+  }
+
+  &__email {
+    font-family: $ff-500;
+    font-size: $fs-xs;
+    color: $clr-neutral-blue--dark;
+  }
+
+  &__copyright {
+    font-family: $ff-400;
+    font-size: $fs-xs;
+    color: $clr-neutral-blue--light;
+  }
+}
 
 
 
@@ -39,8 +90,8 @@ html {
 
 .card-main {
   &__title {
-    font-family: $ff-500;
-    font-size: $fs-l;
+    font-family: $ff-700;
+    font-size: $fs-m;
     color: $clr-neutral-blue--dark;
   }
 
@@ -48,6 +99,7 @@ html {
     font-family: $ff-400;
     font-size: $fs-s;
     color: $clr-neutral-blue--light;
+    line-height: 1.7;
   }
 }
 
@@ -67,6 +119,7 @@ html {
   &__body {
     font-family: $ff-400;
     font-size: $fs-xs;
+    line-height: 1.9; 
     color: $clr-neutral-blue--light;
   }
 }

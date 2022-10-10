@@ -101,6 +101,41 @@ html {
   font-size: 16px;
 }
 
+.feedback__header {
+  font-family: "Vietnam-700";
+  font-size: 2em;
+  color: hsl(233deg, 12%, 13%);
+}
+
+.cta__header {
+  font-family: "Vietnam-700";
+  font-size: 2em;
+  color: hsl(0deg, 0%, 98%);
+}
+
+.footer__links-wrapper {
+  font-family: "Vietnam-500";
+  font-size: 1em;
+  color: hsl(0deg, 0%, 98%);
+}
+.footer__link a {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.footer__link a:hover, .footer__link a:active {
+  color: hsl(12deg, 88%, 59%);
+}
+.footer__email {
+  font-family: "Vietnam-500";
+  font-size: 1em;
+  color: hsl(233deg, 12%, 13%);
+}
+.footer__copyright {
+  font-family: "Vietnam-400";
+  font-size: 1em;
+  color: hsl(227deg, 12%, 61%);
+}
+
 .navbar__items {
   font-family: "Vietnam-700";
   font-size: 1em;
@@ -113,14 +148,15 @@ html {
 }
 
 .card-main__title {
-  font-family: "Vietnam-500";
-  font-size: 3em;
+  font-family: "Vietnam-700";
+  font-size: 2em;
   color: hsl(233deg, 12%, 13%);
 }
 .card-main__body {
   font-family: "Vietnam-400";
   font-size: 1.2em;
   color: hsl(227deg, 12%, 61%);
+  line-height: 1.7;
 }
 
 .card-list__title {
@@ -136,6 +172,7 @@ html {
 .card-list__body {
   font-family: "Vietnam-400";
   font-size: 1em;
+  line-height: 1.9;
   color: hsl(227deg, 12%, 61%);
 }
 
@@ -216,8 +253,8 @@ html {
   align-self: center;
   background-color: hsl(13deg, 100%, 96%);
   border-radius: 20px;
-  padding: 2px 15px 2px 30px;
-  margin-left: -60px;
+  padding: 2px 0 2px 30px;
+  margin-left: -20px;
 }
 .card-list__body {
   grid-area: bottom;
