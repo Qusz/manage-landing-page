@@ -3,9 +3,9 @@
 $fs-xl: 4.5em;
 $fs-l: 3em;
 $fs-m: 2em;
-$fs-s: 1.2em;
-$fs-xs: 1em;
-$fs-xxs: .8em;
+$fs-s: 1em;
+$fs-xs: .9em;
+$fs-xxs: .6em;
 
 $ff-400: 'Vietnam-400';
 $ff-500: 'Vietnam-500';
@@ -78,7 +78,7 @@ html {
 .navbar {
   &__items {
     font-family: $ff-700;
-    font-size: $fs-xs;
+    font-size: $fs-s;
     color: $clr-neutral-blue--dark;
   }
 }

@@ -13,42 +13,38 @@
     }
 }
 
-//TODO Remake the card w/ position absolute
+.product__card-2 {
+  margin-block: 3rem;
+}
+
 .card-list {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: 
-        "number title"
-        "bottom bottom";
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
 
-        &__number {
-          grid-area: number;
-          align-self: start;
-          justify-self: start;
+    &__number {
+      background-color: $clr-accent;
+      text-align: center;
+      border-radius: 30px;
+      padding: 8px 25px;
+      margin-left: -3px;
+      z-index: 2;
+    }
 
-          background-color: $clr-accent;
-          border-radius: 20px;
-          padding: 3px 20px;
-          text-align: center;
+    &__header {
+      justify-self: center;
+      background-color: $clr-neutral-pale;
+      border-radius: 30px;
+      padding-block: 4px;
+    }
 
-          z-index: 2;
-        }
+    &__title {
+      margin-left: 10px;
+    }
 
-        &__title {
-          grid-area: title;
-          align-self: center;
-          
-
-          background-color: $clr-neutral-pale;
-          border-radius: 20px;
-          padding: 2px 0 2px 30px;
-          margin-left: -20px;
- 
-        }
-
-        &__body {
-          grid-area: bottom;
-        }
+    &__body {
+      margin-top: $spacer-xs;
+    }
 }
 
 .card-feedback {
@@ -60,6 +56,9 @@
 }
 
 
+//* =====================
+//* Desktop
+//* =====================
 
 @media screen and (min-width: 1024px) {
   .card-main {
@@ -67,24 +66,38 @@
     text-align: left;
   }
 
-    .card-list {
-      grid-template-areas: 
-        "number title"
-        "number body";
+  .card-list {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "title title"
+    ". bottom";
 
-      &__number {
-        grid-area: number;
-      }
+    &__header {
+      grid-area: title;
+      justify-self: start;
+      background-color: transparent;
+      width: 100%;
 
-      &__title {
-        grid-area: title;
-        background-color: transparent;
-        margin: 0;
-        padding: 0;
-      }
+      display: grid;
+      grid-template-columns: 20% 80%;
+    }
 
-      &__body {
-        grid-area: body;
-      }
-  }
+    &__number {
+      margin: 0;
+      grid-column: 1/2;
+      align-self: center;
+      width: 70%;
+    }
+
+    &__title {
+      margin: 0;
+      grid-column: 2/3;
+      align-self: center;
+    }
+
+    &__body {
+      grid-area: bottom;
+    }
+  } 
 }

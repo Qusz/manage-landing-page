@@ -115,7 +115,7 @@ html {
 
 .footer__links-wrapper {
   font-family: "Vietnam-500";
-  font-size: 1em;
+  font-size: 0.9em;
   color: hsl(0deg, 0%, 98%);
 }
 .footer__link a {
@@ -127,12 +127,12 @@ html {
 }
 .footer__email {
   font-family: "Vietnam-500";
-  font-size: 1em;
+  font-size: 0.9em;
   color: hsl(233deg, 12%, 13%);
 }
 .footer__copyright {
   font-family: "Vietnam-400";
-  font-size: 1em;
+  font-size: 0.9em;
   color: hsl(227deg, 12%, 61%);
 }
 
@@ -144,7 +144,7 @@ html {
 
 .btn {
   font-family: "Vietnam-500";
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .card-main__title {
@@ -154,36 +154,36 @@ html {
 }
 .card-main__body {
   font-family: "Vietnam-400";
-  font-size: 1.2em;
+  font-size: 1em;
   color: hsl(227deg, 12%, 61%);
   line-height: 1.7;
 }
 
 .card-list__title {
   font-family: "Vietnam-700";
-  font-size: 1.2em;
+  font-size: 1em;
   color: hsl(233deg, 12%, 13%);
 }
 .card-list__number {
   font-family: "Vietnam-700";
-  font-size: 1.2em;
+  font-size: 1em;
   color: hsl(0deg, 0%, 98%);
 }
 .card-list__body {
   font-family: "Vietnam-400";
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.9;
   color: hsl(227deg, 12%, 61%);
 }
 
 .card-feedback__username {
   font-family: "Vietnam-700";
-  font-size: 1.2em;
+  font-size: 1em;
   color: hsl(233deg, 12%, 13%);
 }
 .card-feedback__body {
   font-family: "Vietnam-400";
-  font-size: 1em;
+  font-size: 0.9em;
   color: hsl(227deg, 12%, 61%);
 }
 
@@ -233,31 +233,34 @@ html {
   margin-top: 2rem;
 }
 
+.product__card-2 {
+  margin-block: 3rem;
+}
+
 .card-list {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "number title" "bottom bottom";
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 .card-list__number {
-  grid-area: number;
-  align-self: start;
-  justify-self: start;
   background-color: hsl(12deg, 88%, 59%);
-  border-radius: 20px;
-  padding: 3px 20px;
   text-align: center;
+  border-radius: 30px;
+  padding: 8px 25px;
+  margin-left: -3px;
   z-index: 2;
 }
-.card-list__title {
-  grid-area: title;
-  align-self: center;
+.card-list__header {
+  justify-self: center;
   background-color: hsl(13deg, 100%, 96%);
-  border-radius: 20px;
-  padding: 2px 0 2px 30px;
-  margin-left: -20px;
+  border-radius: 30px;
+  padding-block: 4px;
+}
+.card-list__title {
+  margin-left: 10px;
 }
 .card-list__body {
-  grid-area: bottom;
+  margin-top: 1rem;
 }
 
 .card-feedback {
@@ -274,19 +277,31 @@ html {
     text-align: left;
   }
   .card-list {
-    grid-template-areas: "number title" "number body";
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "title title" ". bottom";
+  }
+  .card-list__header {
+    grid-area: title;
+    justify-self: start;
+    background-color: transparent;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
   }
   .card-list__number {
-    grid-area: number;
+    margin: 0;
+    grid-column: 1/2;
+    align-self: center;
+    width: 70%;
   }
   .card-list__title {
-    grid-area: title;
-    background-color: transparent;
     margin: 0;
-    padding: 0;
+    grid-column: 2/3;
+    align-self: center;
   }
   .card-list__body {
-    grid-area: body;
+    grid-area: bottom;
   }
 }
 .navbar__wrapper {
