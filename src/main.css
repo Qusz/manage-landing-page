@@ -328,8 +328,8 @@ html {
   visibility: hidden;
   max-height: 0px;
   opacity: 0;
-  overflow: hidden;
   text-align: center;
+  z-index: 99;
 }
 .navbar__items.is-active {
   display: flex;
@@ -396,7 +396,17 @@ html {
   display: none;
 }
 
-.body.is-active {
+.veil {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.veil.is-active {
+  display: block;
   animation: darken-body 0.8s ease forwards;
 }
 
@@ -532,4 +542,11 @@ html {
 .footer__copyright {
   margin-top: 4rem;
   align-self: center;
+}
+
+.blob-top {
+  z-index: -1;
+  position: absolute;
+  top: -30px;
+  left: 50px;
 }
