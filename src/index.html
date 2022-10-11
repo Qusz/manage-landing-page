@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./main.css">
   <title>Manage</title>
 </head>
-<body class="body" style="background-color: darkolivegreen;">
+<body class="body">
 
   <main class="main">
 
@@ -49,43 +49,38 @@
     </section>
 
     <section class="product container">
-      <div class="product__card-1 card-main">
-        <h3 class="card-main__title">
+      <div class="product__header">
+        <h2 class="product__title">
           What’s different about Manage?
-        </h3>
-        <div class="card-main__body">
-          Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams. 
+        </h2>
+        <p class="product__desc">
+          Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
+        </p>
+      </div>
+      <div class="product__card-1 card-list">
+        <div class="card-list__header">
+          <span class="card-list__number">01</span><span class="card-list__title">Track company-wide progress</span>
+        </div>
+        <div class="card-list__body">
+          See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
         </div>
       </div>
-      <div class="product__wrapper">
         <div class="product__card-2 card-list">
-          <!-- <div class="card-list__number">01</div> -->
           <div class="card-list__header">
-            <span class="card-list__number">01</span><span class="card-list__title">Track company-wide progress</span>
+            <span class="card-list__number">02</span><span class="card-list__title">Advanced built-in reports</span>
           </div>
-          <div class="card-list__body">
-            See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
-          </div>
-        </div>
-        <!-- <div class="product__card-3 card-list">
-          <div class="card-list__number">02</div>
-          <div class="card-list__title">
-            Advanced built-in reports
-          </div>
-          <div class="card-list__body">
+          <div class="card-list__body">    
             Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
           </div>
         </div>
-        <div class="product__card-4 card-list">
-          <div class="card-list__number">03</div>
-          <div class="card-list__title">
-            Everything you need in one place
+        <div class="product__card-3 card-list">
+          <div class="card-list__header">
+            <span class="card-list__number">03</span><span class="card-list__title">Everything you need in one place</span>
           </div>
           <div class="card-list__body">
             Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.
           </div>
         </div>
-      </div> -->
     </section>
 
     <section class="feedback">
@@ -134,32 +129,19 @@
     <section class="cta">
       <div class="cta__wrapper container">
         <h2 class="cta__header">Simplify how your team works today.</h2>
-        <div class="cta__button btn btn-neutral">Get Started</div>
+        <a href="#" class="cta__button btn btn-neutral">Get Started</a>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__wrapper container">
 
-        <div class="info">
-          <img src="../assets/img/logo.svg" alt="company logo" class="footer__logo">
-          <div class="footer__social">
-            <a href="#" class="footer__social-icon">
-              <img src="../assets/img/icon-facebook.svg" alt="facebook">
-            </a>
-            <a href="#" class="footer__social-icon">
-              <img src="../assets/img/icon-youtube.svg" alt="youtube">
-            </a>
-            <a href="#" class="footer__social-icon">
-              <img src="../assets/img/icon-twitter.svg" alt="twitter">
-            </a>
-            <a href="#" class="footer__social-icon">
-              <img src="../assets/img/icon-pinterest.svg" alt="pinterest">
-            </a>
-            <a href="#" class="footer__social-icon">
-              <img src="../assets/img/icon-instagram.svg" alt="instagram">
-            </a>
-          </div>
+        <div class="footer__subscribe">
+            <form action="submit" class="footer__form">
+              <!-- TODO add email form validation -->
+              <input type="email" name="email" class="footer__email" placeholder="Your email">
+              <button class="btn btn-accent">GO</button>
+            </form>
         </div>
 
         <div class="footer__links-wrapper">
@@ -190,18 +172,31 @@
           </ul>
         </div>
 
-        <div class="footer__subscribe">
-          <div class="footer__email">
-            <form action="submit">
-              <!-- TODO add email form validation -->
-              <input type="email" name="email" placeholder="Your email">
-              <button class="subscribe__button btn btn-accent">Go</button>
-            </form>
-          </div>
-          <p class="footer__copyright">
-            Copyright 2020. All Rights Reserved
-          </p>
+        
+        <div class="footer__social">
+          <a href="#" class="footer__social-icon">
+            <img src="../assets/img/icon-facebook.svg" alt="facebook">
+          </a>
+          <a href="#" class="footer__social-icon">
+            <img src="../assets/img/icon-youtube.svg" alt="youtube">
+          </a>
+          <a href="#" class="footer__social-icon">
+            <img src="../assets/img/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="#" class="footer__social-icon">
+            <img src="../assets/img/icon-pinterest.svg" alt="pinterest">
+          </a>
+          <a href="#" class="footer__social-icon">
+            <img src="../assets/img/icon-instagram.svg" alt="instagram">
+          </a>
         </div>
+        
+        <img src="../assets/img/logo.svg" alt="company logo" class="footer__logo">
+
+
+        <p class="footer__copyright">
+          Copyright 2020. All Rights Reserved
+        </p>
 
       </div>
     </footer>

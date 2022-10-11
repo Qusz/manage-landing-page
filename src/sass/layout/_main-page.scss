@@ -1,0 +1,153 @@
+@use '../base/' as *;
+
+//* ================
+//* Navbar
+//* ================
+
+.navbar {
+  margin-top: $spacer-m;
+}
+
+
+//* ================
+//* Hero
+//* ================
+
+.hero {
+  margin-top: $spacer-m;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacer-xs;
+}
+
+
+//* ================
+//* Product
+//* ================
+
+.product {
+  margin-top: $spacer-xxl;
+
+    &__header {
+      text-align: center;
+      margin-bottom: $spacer-m;
+    }
+
+    &__desc {
+      margin-top: $spacer-xs;
+    }
+}
+
+
+//* ================
+//* Feedback
+//* ================
+
+.feedback {
+  margin-top: $spacer-m;
+
+  display: flex;
+  flex-direction: column;
+
+    &__header {
+      text-align: center;
+      margin-bottom: $spacer-l;
+    }
+
+    &__button {
+      margin: $spacer-m auto;
+    }
+}
+
+//* ================
+//* CTA
+//* ================
+
+.cta {
+  background-color: $clr-accent;
+  padding-block: $spacer-xl;
+
+  text-align: center;
+
+    &__header {
+      margin-bottom: $spacer-m;
+    }
+}
+
+//* ================
+//* Footer
+//* ================
+
+.footer {
+  background-color: $clr-neutral-blue--dark;
+  padding-block: $spacer-m;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__form {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__email {
+      border: none;
+      padding-inline: 15px;
+      border-radius: 30px;
+      width: 80%;
+      
+        &::placeholder {
+          text-align: center;
+        }
+
+        &:focus {
+          outline: 3px solid $clr-accent;
+        }
+    }
+
+    &__links-wrapper {
+      margin-top: $spacer-m;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__link {
+      &:not(:first-child) {
+        margin-top: $spacer-xs;
+      }
+    }
+
+    &__social {
+      margin-top: $spacer-s;
+
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__social-icon {
+      &:hover,
+      &:focus {
+        filter: invert(54%) sepia(59%) saturate(4783%) hue-rotate(340deg) brightness(100%) contrast(90%);
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+
+    &__logo {
+      margin-top: $spacer-m;
+      align-self: center;
+      width: 50%;
+    }
+
+    &__copyright {
+      margin-top: $spacer-l;
+      align-self: center;
+    }
+}
+
+

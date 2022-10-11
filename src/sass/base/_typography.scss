@@ -19,18 +19,34 @@ html {
 //* Layout
 //* ==================
 
+
+.product {
+  &__title {
+    font-family: $ff-700;
+    font-size: $fs-m;
+    color: $clr-primary;
+  }
+
+  &__desc {
+    font-family: $ff-400;
+    font-size: $fs-s;
+    color: $clr-neutral-blue--light;
+    line-height: 1.7;
+  }
+}
+
 .feedback {
   &__header {
     font-family: $ff-700;
     font-size: $fs-m;
-    color: $clr-neutral-blue--dark;
+    color: $clr-primary;
   }
 }
 
 .cta {
   &__header {
-    font-family: $ff-700;
-    font-size: $fs-m;
+    font-family: $ff-500;
+    font-size: $fs-l;
     color: $clr-neutral-white; 
   }
 }
@@ -57,7 +73,7 @@ html {
   &__email {
     font-family: $ff-500;
     font-size: $fs-xs;
-    color: $clr-neutral-blue--dark;
+    color: $clr-primary;
   }
 
   &__copyright {
@@ -92,7 +108,7 @@ html {
   &__title {
     font-family: $ff-700;
     font-size: $fs-m;
-    color: $clr-neutral-blue--dark;
+    color: $clr-primary;
   }
 
   &__body {
@@ -107,7 +123,7 @@ html {
   &__title {
     font-family: $ff-700;
     font-size: $fs-s;
-    color: $clr-neutral-blue--dark;
+    color: $clr-primary;
   }
 
   &__number {
@@ -128,7 +144,7 @@ html {
   &__username {
     font-family: $ff-700;
     font-size: $fs-s;
-    color: $clr-neutral-blue--dark;
+    color: $clr-primary;
   }
 
   &__body {
