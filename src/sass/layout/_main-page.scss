@@ -65,6 +65,7 @@
 //* ================
 
 .cta {
+  position: relative;
   background-color: $clr-accent;
   padding-block: $spacer-xl;
 
@@ -155,15 +156,40 @@
 //* Blobs
 //* ================
 
+
+
+.blob {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .blob-top {
   z-index: -1;
-  position: absolute;
-  top: -40px;
-  left: 50px;
+  background-image: url('/assets/img/bg-tablet-pattern.svg');
+  top: -120px;
+  right: -170px;
+  width: 500px;
+  height: 500px;
+
 }
 
 .blob-hero {
-  z-index: 99;
-  width: 100px;
+  z-index: -1;
   background-image: url('/assets/img/bg-tablet-pattern.svg');
+  width: 350px;
+  height: 450px;
+  top: 530px;
+  right: -210px;
+}
+
+.blob-cta {
+  background-image: url('/assets/img/bg-simplify-section-mobile.svg');
+  width: 330px;
+  height: 330px;
+  top: 50px;
+
+  z-index: 2;
+
+
 }

@@ -2,8 +2,7 @@
   "name": "manage-landing-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "author": "",
+  "author": "Qusz",
   "license": "MIT",
   "scripts": {
     "compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css"
