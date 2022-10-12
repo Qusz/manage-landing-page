@@ -570,9 +570,9 @@ html {
 }
 
 .blob-cta {
+  z-index: 2;
   background-image: url("/assets/img/bg-simplify-section-mobile.svg");
   width: 330px;
   height: 330px;
   top: 50px;
-  z-index: 2;
 }
