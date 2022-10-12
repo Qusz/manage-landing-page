@@ -547,6 +547,12 @@ html {
 .blob-top {
   z-index: -1;
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: 50px;
+}
+
+.blob-hero {
+  z-index: 99;
+  width: 100px;
+  background-image: url("/assets/img/bg-tablet-pattern.svg");
 }

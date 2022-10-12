@@ -11,19 +11,23 @@ class Navbar {
     this.veil.classList.toggle('is-active');
     this.navbar.classList.toggle('is-active');
   }
+
 }
 
 (() => {
-  const navbar = new Navbar();
-
-  navbar.hamburger.addEventListener('click', () => {
-    navbar.toggleNav();
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('veil')) {
+  try {
+    const navbar = new Navbar();
+    navbar.hamburger.addEventListener('click', () => {
       navbar.toggleNav();
-    }
-  });
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('veil')) {
+        navbar.toggleNav();
+      }
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
 })();
 
