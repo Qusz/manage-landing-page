@@ -456,7 +456,7 @@ html {
 .swiper {
   width: 100%;
   height: 100%;
-  margin-top: 3rem;
+  margin-block: 2rem;
 }
 
 .swiper-slide {
@@ -523,10 +523,14 @@ html {
 }
 .feedback__header {
   text-align: center;
-  margin-bottom: 4rem;
+}
+.feedback__container {
+  display: flex;
+  flex-direction: column;
 }
 .feedback__button {
-  margin: 3rem auto;
+  align-self: center;
+  margin-bottom: 3rem;
 }
 
 .cta {
@@ -592,24 +596,17 @@ html {
   align-self: center;
 }
 
-.blob {
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.blob-top {
-  z-index: -1;
-  background-image: url("/assets/img/bg-tablet-pattern.svg");
-  top: -120px;
-  right: -170px;
-  width: 100%;
-  height: 100%;
-}
-
 .blob-wrapper {
-  width: auto;
-  height: auto;
-  background-color: aqua;
-  overflow: hidden;
+  position: relative;
+}
+
+.blob {
+  position: relative;
+}
+
+.blob-img {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: -220px;
 }

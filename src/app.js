@@ -31,7 +31,7 @@ class Navbar {
   }
 
   try {
-    const swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".feedback__slider", {
       pagination: {
         el: ".swiper-pagination"
       },
