@@ -219,3 +219,37 @@
 //* ================
 //* Desktop
 //* ================
+
+@media screen and (min-width: 1024px) {
+
+  .hero {
+    margin-top: $spacer-xl;
+    flex-direction: row;
+    justify-content: space-between;
+
+      &__card {
+        order: -1;
+        width: 40%;
+      }
+
+      &__img {
+        width: 45%;
+      }
+  }
+
+  .product {
+    display: flex;
+    justify-content: space-between;
+
+      &__header {
+        width: 45%;
+        text-align: left;
+      }
+
+      &__cards {
+        width: 45%;
+      }
+  }
+
+
+}

@@ -2,7 +2,7 @@
 
 $fs-xl: 4.5em;
 $fs-l: 3em;
-$fs-m: 2em;
+$fs-m: 1.5em;
 $fs-s: 1em;
 $fs-xs: .9em;
 $fs-xxs: .6em;
@@ -152,4 +152,39 @@ html {
     font-size: $fs-xs;
     color: $clr-neutral-blue--light;
   }
-} 
+}
+
+
+
+//* ================
+//* Desktop
+//* ================
+
+@media screen and (min-width: 1024px) {
+
+  .card-main {
+    &__title {
+      font-size: $fs-l;
+      line-height: 1.3;
+  
+    }
+  
+    &__body {
+      font-size: $fs-m;
+      line-height: 1.7;
+    }
+  }
+
+  .product {
+    &__title {
+      font-size: $fs-m;
+    }
+  
+    &__desc {
+      font-size: $fs-s;
+    }
+  }
+
+
+
+}
