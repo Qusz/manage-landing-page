@@ -1,3 +1,4 @@
+import Swiper from 'swiper/bundle';
 
 class Navbar {
   constructor() {
@@ -11,7 +12,6 @@ class Navbar {
     this.veil.classList.toggle('is-active');
     this.navbar.classList.toggle('is-active');
   }
-
 }
 
 (() => {
@@ -27,7 +27,18 @@ class Navbar {
       }
     });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
+
+  try {
+    const swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination"
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+
 })();
 

@@ -53,6 +53,11 @@
   align-items: center;
   text-align: center;
   gap: $spacer-s;
+  padding-block: $spacer-m;
+
+    &__userpic {
+      max-width: 90px;
+    }
 }
 
 
