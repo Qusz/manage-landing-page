@@ -105,31 +105,31 @@ html {
 
 .product__title {
   font-family: "Vietnam-700";
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: hsl(228deg, 39%, 23%);
 }
 .product__desc {
   font-family: "Vietnam-400";
-  font-size: 1em;
+  font-size: 1rem;
   color: hsl(227deg, 12%, 61%);
   line-height: 1.7;
 }
 
 .feedback__header {
   font-family: "Vietnam-700";
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: hsl(228deg, 39%, 23%);
 }
 
 .cta__header {
   font-family: "Vietnam-500";
-  font-size: 3em;
+  font-size: 2rem;
   color: hsl(0deg, 0%, 98%);
 }
 
 .footer__links-wrapper {
   font-family: "Vietnam-500";
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: hsl(0deg, 0%, 98%);
 }
 .footer__link a {
@@ -141,80 +141,97 @@ html {
 }
 .footer__email {
   font-family: "Vietnam-500";
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: hsl(228deg, 39%, 23%);
 }
 .footer__copyright {
   font-family: "Vietnam-400";
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: hsl(227deg, 12%, 61%);
 }
 
 .navbar__items {
   font-family: "Vietnam-700";
-  font-size: 1em;
+  font-size: 1rem;
   color: hsl(228deg, 39%, 23%);
 }
 
 .btn {
   font-family: "Vietnam-500";
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 .card-main__title {
   font-family: "Vietnam-700";
-  font-size: 1.5em;
+  font-size: 2rem;
   color: hsl(228deg, 39%, 23%);
 }
 .card-main__body {
   font-family: "Vietnam-400";
-  font-size: 1em;
+  font-size: 1rem;
   color: hsl(227deg, 12%, 61%);
   line-height: 1.7;
 }
 
 .card-list__title {
   font-family: "Vietnam-700";
-  font-size: 1em;
+  font-size: 1rem;
   color: hsl(228deg, 39%, 23%);
 }
 .card-list__number {
   font-family: "Vietnam-700";
-  font-size: 1em;
+  font-size: 0.9rem;
   color: hsl(0deg, 0%, 98%);
 }
 .card-list__body {
   font-family: "Vietnam-400";
-  font-size: 0.9em;
+  font-size: 0.9rem;
   line-height: 1.9;
   color: hsl(227deg, 12%, 61%);
 }
 
 .card-feedback__username {
   font-family: "Vietnam-700";
-  font-size: 1em;
+  font-size: 1rem;
   color: hsl(228deg, 39%, 23%);
 }
 .card-feedback__body {
   font-family: "Vietnam-400";
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: hsl(227deg, 12%, 61%);
 }
 
 @media screen and (min-width: 1024px) {
   .card-main__title {
-    font-size: 3em;
+    font-size: 2.7rem;
     line-height: 1.3;
   }
-  .card-main__body {
-    font-size: 1.5em;
-    line-height: 1.7;
+  .card-list__title {
+    font-size: 1.5rem;
+  }
+  .card-list__number {
+    font-size: 1rem;
+  }
+  .card-list__body {
+    font-size: 1rem;
+  }
+  .card-feedback__username {
+    font-size: 1.5rem;
+  }
+  .card-feedback__body {
+    font-size: 1rem;
   }
   .product__title {
-    font-size: 1.5em;
+    font-size: 2rem;
   }
   .product__desc {
-    font-size: 1em;
+    font-size: 1rem;
+  }
+  .footer__links-wrapper {
+    font-size: 1rem;
+  }
+  .footer__email {
+    font-size: 1rem;
   }
 }
 .btn-accent {
