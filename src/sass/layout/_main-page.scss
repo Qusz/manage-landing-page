@@ -1,5 +1,14 @@
 @use '../base/' as *;
 
+
+// This is so that background blobs don't cause horizontal scrolling
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
 //* ================
 //* Navbar
 //* ================
@@ -66,12 +75,16 @@
 }
 
 
+
 //* ================
 //* CTA
 //* ================
 
 .cta {
+  // This is for the background blob
   position: relative;
+  overflow: hidden;
+
   background-color: $clr-accent;
   padding-block: $spacer-xl;
 
@@ -81,6 +94,7 @@
       margin-bottom: $spacer-m;
     }
 }
+
 
 
 //* ================
@@ -159,101 +173,43 @@
 }
 
 
+
 //* ================
 //* Blobs
 //* ================
 
-
-
-// .blob {
-//   position: absolute;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-// }
-
-.blob-wrapper {
-  position: relative;
-
-
-
-}
-
 .blob {
-  position: relative;
-  // overflow: hidden; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+
+    &__top {
+      background-image: url('/assets/img/bg-tablet-pattern.svg');
+      z-index: -1;
+      width: 600px;
+      height: 600px;
+      
+      top: -190px;
+      left: 50px;
+    }
+
+    &__hero {
+      background-image: url('/assets/img/bg-tablet-pattern.svg');
+      z-index: -1;
+      width: 300px;
+      height: 300px;
+     
+      top: 540px;
+      right: -160px;
+    }
+
+    &__cta {
+      background-image: url('/assets/img/bg-simplify-section-mobile.svg');
+      width: 350px;
+      height: 350px;
+      z-index: 2;
+    
+      top: 40px;
+      left: -10px;
+    }
 }
-
-.blob-img {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  right: -220px;
-
-  // overflow: hidden;
-  // width: auto;
-  // height: auto;
-  // background-color: aqua;
-  // top: -220px;
-  // left: 100px;
-  // z-index: -2;
-
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // position: absolute;
-
-
-  // height: 50px;
-
-
-}
-
-
-
-// .blob-hero {
-//   z-index: -1;
-//   background-image: url('/assets/img/bg-tablet-pattern.svg');
-//   width: 350px;
-//   height: 450px;
-//   top: 530px;
-//   right: -210px;
-  
-// }
-
-// .blob-cta {
-//   z-index: 2;
-//   background-image: url('/assets/img/bg-simplify-section-mobile.svg');
-//   width: 330px;
-//   height: 330px;
-//   top: 50px;
-// }
-
-
-
-
-// .blob-top {
-//   z-index: -1;
-//   background-image: url('/assets/img/bg-tablet-pattern.svg');
-//   top: -120px;
-//   right: -170px;
-//   width: 500px;
-//   height: 500px;
-  
-// }
-
-// .blob-hero {
-//   z-index: -1;
-//   background-image: url('/assets/img/bg-tablet-pattern.svg');
-//   width: 350px;
-//   height: 450px;
-//   top: 530px;
-//   right: -210px;
-  
-// }
-
-// .blob-cta {
-//   z-index: 2;
-//   background-image: url('/assets/img/bg-simplify-section-mobile.svg');
-//   width: 330px;
-//   height: 330px;
-//   top: 50px;
-// }
