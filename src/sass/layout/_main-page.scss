@@ -106,8 +106,20 @@
   padding-block: $spacer-m;
 
     &__wrapper {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-areas: 
+        "email email"
+        "links-1 links-2"
+        "social social"
+        "logo logo"
+        "copyright copyright";
+        
+      justify-items: center;
+      gap: $spacer-m;
+    }
+
+    &__subscribe {
+      grid-area: email;
     }
 
     &__form {
@@ -130,10 +142,12 @@
         }
     }
 
-    &__links-wrapper {
-      margin-top: $spacer-m;
-      display: flex;
-      justify-content: space-around;
+    &__links-1 {
+      grid-area: links-1;
+    }
+
+    &__links-2 {
+      grid-area: links-2;
     }
 
     &__link {
@@ -143,10 +157,12 @@
     }
 
     &__social {
-      margin-top: $spacer-s;
+      grid-area: social;
+      justify-self: start;
+      width: 100%;
 
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     &__social-icon {
@@ -156,19 +172,17 @@
       }
 
       img {
-        width: 30px;
+        width: 35px;
       }
     }
 
     &__logo {
-      margin-top: $spacer-m;
-      align-self: center;
-      width: 50%;
+      grid-area: logo;
+      width: 60%;
     }
 
     &__copyright {
-      margin-top: $spacer-l;
-      align-self: center;
+      grid-area: copyright;
     }
 }
 
@@ -274,6 +288,22 @@
       }
   }
 
+  .footer {
+    &__wrapper {
+      grid-template-areas: 
+        "logo links-1 links-2 email"
+        "social links-1 links-2 copyright";
+      gap: $spacer-xl;
+    }
 
+    &__logo {
+      width: 90%;
+      justify-self: center;
+    }
+
+    &__social-icon {
+      width: 30px;
+    }
+  }
 
 }

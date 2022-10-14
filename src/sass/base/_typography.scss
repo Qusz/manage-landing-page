@@ -52,22 +52,20 @@ html {
 }
 
 .footer {
-  &__links-wrapper {
+  &__link {
     font-family: $ff-500;
     font-size: $fs-xs;
     color: $clr-neutral-white;
-  }
 
-  &__link {
-    a {
-      cursor: pointer;
-      transition: .2s ease;
-  
-        &:hover,
-        &:active {
-          color: $clr-accent;
-        }
-    }
+      a {
+        cursor: pointer;
+        transition: .2s ease;
+    
+          &:hover,
+          &:active {
+            color: $clr-accent;
+          }
+      }
   }
 
   &__email {
@@ -200,7 +198,7 @@ html {
   }
 
   .footer {
-    &__links-wrapper {
+    &__link {
       font-size: $fs-s;
     }
 
