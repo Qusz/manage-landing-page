@@ -1,7 +1,7 @@
 @use './colors' as *;
 
 $fs-xl: 2.7rem;
-$fs-l: 2rem;
+$fs-l: 2.3rem;
 $fs-m: 1.5rem;
 $fs-s: 1rem;
 $fs-xs: .9rem;
@@ -170,10 +170,6 @@ html {
   }
 
   .card-list {
-    &__title {
-      font-size: $fs-m;
-    }
-  
     &__number {
       font-size: $fs-s;
     }
@@ -210,6 +206,12 @@ html {
 
     &__email {
       font-size: $fs-s;
+    }
+  }
+
+  .feedback {
+    &__header {
+      font-size: $fs-l;
     }
   }
 }

@@ -242,14 +242,38 @@
     justify-content: space-between;
 
       &__header {
-        width: 45%;
+        width: 35%;
         text-align: left;
       }
 
       &__cards {
         width: 45%;
       }
+
+      &__desc {
+        margin-top: $spacer-s;
+      }
   }
+
+  .feedback {
+    margin-top: $spacer-xxl;
+  }
+
+  .cta {    
+    text-align: left;
+
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__header {
+        width: 40%;
+        margin: 0;
+      }
+  }
+
 
 
 }
