@@ -704,6 +704,7 @@ html {
   }
   .feedback {
     margin-top: 8rem;
+    flex-direction: row;
   }
   .cta {
     text-align: left;

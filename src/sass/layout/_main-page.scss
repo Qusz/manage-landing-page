@@ -271,6 +271,8 @@
 
   .feedback {
     margin-top: $spacer-xxl;
+
+    flex-direction: row;
   }
 
   .cta {    

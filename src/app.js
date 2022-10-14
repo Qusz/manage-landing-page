@@ -14,6 +14,10 @@ class Navbar {
   }
 }
 
+
+
+//* Main
+
 (() => {
   try {
     const navbar = new Navbar();
@@ -26,19 +30,58 @@ class Navbar {
         navbar.toggleNav();
       }
     });
-  } catch (error) {
+  } catch(error) {
     console.log(error);
   }
 
-  try {
-    const swiper = new Swiper(".feedback__slider", {
+
+
+})();
+
+
+let swiper;
+
+
+function checkSlider() {
+
+  if (window.innerWidth < 1024 && swiper === undefined) {
+    swiper = new Swiper(".feedback__slider", {
       pagination: {
         el: ".swiper-pagination"
       },
     });
-  } catch (error) {
-    console.log(error);
+
+    document.querySelector('.feedback__slider').classList.add('swiper');
+    document.querySelector('.feedback__slider').children[0].classList.add('swiper-wrapper');
+    document.querySelector('.feedback__card').classList.add('swiper-slide');
+
+  } else if (window.innerWidth < 1024 && swiper.destroyed === true) {
+    swiper = new Swiper(".feedback__slider", {
+      pagination: {
+        el: ".swiper-pagination"
+      },
+    });
+
+    document.querySelector('.feedback__slider').classList.add('swiper');
+    document.querySelector('.feedback__slider').children[0].classList.add('swiper-wrapper');
+    document.querySelector('.feedback__card').classList.add('swiper-slide');
+
+  } else if (window.innerWidth >= 1024 && swiper !== undefined && swiper.destroyed !== true) {
+    swiper.destroy(false, true);
+
+    document.querySelector('.feedback__slider').classList.remove('swiper');
+    document.querySelector('.feedback__slider').children[0].classList.remove('swiper-wrapper');
+    document.querySelector('.feedback__card').classList.remove('swiper-slide');
   }
 
-})();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  checkSlider();
+});
+window.addEventListener('resize', () => {
+  checkSlider();
+});
+
+
 
