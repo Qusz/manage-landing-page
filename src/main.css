@@ -99,10 +99,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-html {
-  font-size: 16px;
-}
-
 .product__title {
   font-family: "Vietnam-700";
   font-size: 1.5rem;
@@ -210,12 +206,6 @@ html {
     font-size: 1rem;
   }
   .card-list__body {
-    font-size: 1rem;
-  }
-  .card-feedback__username {
-    font-size: 1.5rem;
-  }
-  .card-feedback__body {
     font-size: 1rem;
   }
   .product__title {
@@ -332,6 +322,9 @@ html {
   }
   .card-main__button {
     margin-top: 1rem;
+  }
+  .card-feedback {
+    gap: 1rem;
   }
   .card-list {
     display: grid;
@@ -499,7 +492,6 @@ html {
 .swiper-slide {
   text-align: center;
   background: hsl(0deg, 0%, 98%);
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -521,6 +513,10 @@ html {
   object-fit: cover;
 }
 
+.swiper-pagination {
+  display: block;
+}
+
 .swiper-pagination-bullet {
   opacity: 1;
   background: hsl(0deg, 0%, 98%);
@@ -531,6 +527,21 @@ html {
   background: hsl(12deg, 88%, 59%);
 }
 
+@media screen and (min-width: 1024px) {
+  .swiper {
+    max-width: 98%;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .swiper-slide {
+    width: 20%;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
 .main {
   position: relative;
   overflow: hidden;
@@ -544,6 +555,7 @@ html {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -557,11 +569,14 @@ html {
 .product__desc {
   margin-top: 1rem;
 }
+.product__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .feedback {
   margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
 }
 .feedback__header {
   text-align: center;
@@ -704,7 +719,6 @@ html {
   }
   .feedback {
     margin-top: 8rem;
-    flex-direction: row;
   }
   .cta {
     text-align: left;
@@ -728,5 +742,25 @@ html {
   }
   .footer__social-icon {
     width: 30px;
+  }
+  .blob__top {
+    width: 850px;
+    height: 850px;
+    top: -200px;
+    left: 850px;
+  }
+  .blob__hero {
+    width: 850px;
+    height: 850px;
+    top: 1120px;
+    right: 0;
+    left: -500px;
+  }
+  .blob__cta {
+    background-image: url("/assets/img/bg-simplify-section-desktop.svg");
+    width: 1800px;
+    height: 1800px;
+    top: -150px;
+    left: 100px;
   }
 }

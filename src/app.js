@@ -41,47 +41,72 @@ class Navbar {
 
 let swiper;
 
+function initSwiper() {
+
+  swiper = new Swiper(".feedback__slider", {
+    pagination: {
+      el: ".swiper-pagination"
+    },
+
+  });
+
+}
+
+function destroySwiper() {
+  swiper.destroy();
+}
+
 
 function checkSlider() {
 
   if (window.innerWidth < 1024 && swiper === undefined) {
-    swiper = new Swiper(".feedback__slider", {
-      pagination: {
-        el: ".swiper-pagination"
-      },
-    });
-
-    document.querySelector('.feedback__slider').classList.add('swiper');
-    document.querySelector('.feedback__slider').children[0].classList.add('swiper-wrapper');
-    document.querySelector('.feedback__card').classList.add('swiper-slide');
+    
+    initSwiper();
+    console.log('init swiper');
 
   } else if (window.innerWidth < 1024 && swiper.destroyed === true) {
-    swiper = new Swiper(".feedback__slider", {
-      pagination: {
-        el: ".swiper-pagination"
-      },
-    });
-
-    document.querySelector('.feedback__slider').classList.add('swiper');
-    document.querySelector('.feedback__slider').children[0].classList.add('swiper-wrapper');
-    document.querySelector('.feedback__card').classList.add('swiper-slide');
+    initSwiper();
+    console.log('init swiper');
 
   } else if (window.innerWidth >= 1024 && swiper !== undefined && swiper.destroyed !== true) {
-    swiper.destroy(false, true);
 
-    document.querySelector('.feedback__slider').classList.remove('swiper');
-    document.querySelector('.feedback__slider').children[0].classList.remove('swiper-wrapper');
-    document.querySelector('.feedback__card').classList.remove('swiper-slide');
+    destroySwiper();
+    console.log('removed swiper');
+
+  } 
+}
+
+
+function removeSliderContainer() {
+
+  try {
+    switch(true) {
+      case window.innerWidth > 1024:
+        document.querySelector('.feedback__container').classList.remove('container');
+        break;
+      case window.innerWidth <= 1024:
+        document.querySelector('.feedback__container').classList.add('container');
+        break;
+    }
+  } catch(error) {
+    console.log(error);
   }
 
 }
+  
+
 
 window.addEventListener('DOMContentLoaded', () => {
   checkSlider();
+  removeSliderContainer();
 });
+
 window.addEventListener('resize', () => {
   checkSlider();
+  removeSliderContainer();
 });
+
+
 
 
 

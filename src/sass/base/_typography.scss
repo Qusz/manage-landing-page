@@ -11,9 +11,7 @@ $ff-400: 'Vietnam-400';
 $ff-500: 'Vietnam-500';
 $ff-700: 'Vietnam-700';
 
-html {
-  font-size: 16px;
-}
+
 
 //* ==================
 //* Layout
@@ -87,7 +85,6 @@ html {
 //* ==================
 //* Components
 //* ==================
-
 
 .navbar {
   &__items {
@@ -170,16 +167,6 @@ html {
   .card-list {
     &__number {
       font-size: $fs-s;
-    }
-  
-    &__body {
-      font-size: $fs-s;
-    }
-  }
-
-  .card-feedback {
-    &__username {
-      font-size: $fs-m;
     }
   
     &__body {

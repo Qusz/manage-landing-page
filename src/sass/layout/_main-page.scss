@@ -27,6 +27,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: $spacer-xs;
 }
 
@@ -38,6 +39,7 @@
 .product {
   margin-top: $spacer-xxl;
 
+
     &__header {
       text-align: center;
       margin-bottom: $spacer-m;
@@ -45,6 +47,12 @@
 
     &__desc {
       margin-top: $spacer-xs;
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 }
 
@@ -55,9 +63,6 @@
 
 .feedback {
   margin-top: $spacer-m;
-
-  display: flex;
-  flex-direction: column;
 
     &__header {
       text-align: center;
@@ -271,8 +276,6 @@
 
   .feedback {
     margin-top: $spacer-xxl;
-
-    flex-direction: row;
   }
 
   .cta {    
@@ -308,4 +311,31 @@
     }
   }
 
+  .blob {
+    &__top {
+      width: 850px;
+      height: 850px;
+
+      top: -200px;
+      left: 850px;
+    }
+
+    &__hero {
+      width: 850px;
+      height: 850px;
+
+      top: 1120px;
+      right: 0;
+      left: -500px;
+    }
+
+    &__cta {
+      background-image: url('/assets/img/bg-simplify-section-desktop.svg');
+      width: 1800px;
+      height: 1800px;
+
+      top: -150px;
+      left: 100px;
+    }
+  }
 }

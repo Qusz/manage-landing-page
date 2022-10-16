@@ -96,10 +96,10 @@
 
     <section class="feedback">
       <h2 class="feedback__header">What they've said</h2>
-      <div class="container feedback__container">
-        <div class="swiper feedback__slider">
-            <ul class="swiper-wrapper feedback__wrapper">
-              <li class="swiper-slide feedback__card card-feedback">
+      <div class="feedback__container">
+        <div class="feedback__slider swiper">
+            <div class="feedback__wrapper swiper-wrapper">
+              <div class="feedback__card card-feedback swiper-slide">
                 <img src="../assets/img/avatar-anisha.png" class="card-feedback__userpic">
                 <p class="card-feedback__username">
                   Anisha Li
@@ -108,8 +108,8 @@
                   “Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at
                   all times keeps everyone motivated.”
                 </p>
-              </li>
-            <li class="swiper-slide feedback__card card-feedback">
+              </div>
+            <div class="feedback__card card-feedback swiper-slide">
               <img src="../assets/img/avatar-ali.png" class="card-feedback__userpic">
               <p class="card-feedback__username">
                 Ali Bravo
@@ -118,8 +118,8 @@
                 “We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel
                 confusion and everyone is much more focused.”
               </p>
-            </li>
-            <li class="swiper-slide feedback__card card-feedback">
+            </div>
+            <div class="feedback__card card-feedback swiper-slide">
               <img src="../assets/img/avatar-richard.png" class="card-feedback__userpic">
               <p class="card-feedback__username">
                 Richard Watts
@@ -128,8 +128,8 @@
                 “Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop
                 recommending them to everyone I talk to!”
               </p>
-            </li>
-            <li class="swiper-slide feedback__card card-feedback">
+            </div>
+            <div class="feedback__card card-feedback swiper-slide">
               <img src="../assets/img/avatar-shanai.png" class="card-feedback__userpic">
               <p class="card-feedback__username">
                 Shanai Gough
@@ -138,8 +138,8 @@
                 “Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole
                 team in-sync without being intrusive.”
               </p>
-            </li>
-            </ul>
+            </div>
+            </div>
           <div class="swiper-pagination"></div>
         </div>
         <a href="#" class="feedback__button btn btn-accent">Get Started</a>
@@ -160,7 +160,6 @@
 
         <div class="footer__subscribe">
             <form action="submit" class="footer__form">
-              <!-- TODO add email form validation -->
               <input type="email" name="email" class="footer__email" placeholder="Updates in your inbox...">
               <button class="btn btn-accent">GO</button>
             </form>

@@ -10,7 +10,6 @@
   text-align: center;
   background: $clr-neutral-white;
 
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -32,6 +31,10 @@
   object-fit: cover;
 }
 
+.swiper-pagination {
+  display: block;
+}
+
 .swiper-pagination-bullet {
   opacity: 1;
   background: $clr-neutral-white;
@@ -40,4 +43,31 @@
 
 .swiper-pagination-bullet-active {
   background: $clr-accent;
+}
+
+
+
+//* =============
+//* Desktop
+//* =============
+
+@media screen and (min-width: 1024px) {
+
+  .swiper {
+    max-width: 98%;
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .swiper-slide  {
+    width: 20%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+  
 }
