@@ -1,13 +1,7 @@
 @import '/node_modules/swiper/swiper-bundle.min.css';
 .container {
   max-width: 1440px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.container-fluid {
-  max-width: 1440px;
-  width: 100%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -400,7 +394,7 @@ select {
 }
 .navbar__item a:hover,
 .navbar__item a:active {
-  color: hsl(12deg, 88%, 59%);
+  opacity: 0.6;
 }
 .navbar__hamburger {
   align-self: flex-start;
