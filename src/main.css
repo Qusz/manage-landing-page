@@ -140,6 +140,12 @@ select {
   font-size: 0.9rem;
   color: hsl(228deg, 39%, 23%);
 }
+.footer__alert {
+  font-family: "Vietnam-400";
+  font-size: 0.8rem;
+  color: #D22B2B;
+  font-style: italic;
+}
 .footer__copyright {
   font-family: "Vietnam-400";
   font-size: 0.9rem;
@@ -613,6 +619,8 @@ select {
 }
 .footer__subscribe {
   grid-area: email;
+  display: flex;
+  flex-direction: column;
 }
 .footer__form {
   display: flex;
@@ -624,11 +632,11 @@ select {
   border-radius: 30px;
   width: 80%;
 }
-.footer__email::placeholder {
-  text-align: center;
-}
 .footer__email:focus {
   outline: 3px solid hsl(12deg, 88%, 59%);
+}
+.footer__alert {
+  margin: 0.2rem 0 0 0.8rem;
 }
 .footer__links-1 {
   grid-area: links-1;

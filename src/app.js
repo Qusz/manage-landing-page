@@ -91,6 +91,7 @@ class Slider {
 
 (() => {
 
+  //* Hamburger menu
   try {
     const navbar = new Navbar();
     navbar.hamburger.addEventListener('click', () => {
@@ -106,6 +107,7 @@ class Slider {
     console.log(error);
   }
 
+  //* Swiper
   try {
     const slider = new Slider();
     window.addEventListener('DOMContentLoaded', () => {
@@ -122,5 +124,45 @@ class Slider {
     console.log(error);
   }
 
-})();
+  //* Email validation
+  try {
 
+    const emailField = document.querySelector('.footer__email');
+    let alert = null;
+
+    // Prevent email form submission by default
+    document.querySelector('.footer__form').addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+
+    emailField.addEventListener('invalid', (e) => {
+
+      // Make sure there's only 1 alert at a time
+      if (document.querySelector('.footer__alert')) {
+        e.preventDefault();
+        return;
+      }
+
+      emailField.style.border = '2px solid #D22B2B';
+      emailField.style.color = '#D22B2B';
+
+      alert = document.createElement('div');
+      alert.className = 'footer__alert';
+      alert.textContent = 'Please insert a valid email';
+      document.querySelector('.footer__subscribe').appendChild(alert);
+
+      e.preventDefault();
+    });
+
+    // Remove alert after re-focusing
+    emailField.addEventListener('focus', () => {
+      if (alert !== null) {
+        alert.remove();
+      }
+    })
+
+  } catch(error) {
+    console.log(error);
+  }
+
+})();

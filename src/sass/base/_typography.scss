@@ -5,7 +5,7 @@ $fs-l: 2.3rem;
 $fs-m: 1.5rem;
 $fs-s: 1rem;
 $fs-xs: .9rem;
-$fs-xxs: .6rem;
+$fs-xxs: .8rem;
 
 $ff-400: 'Vietnam-400';
 $ff-500: 'Vietnam-500';
@@ -70,6 +70,13 @@ $ff-700: 'Vietnam-700';
     font-family: $ff-500;
     font-size: $fs-xs;
     color: $clr-primary;
+  }
+
+  &__alert {
+    font-family: $ff-400;
+    font-size: $fs-xxs;
+    color: $clr-alert;
+    font-style: italic;
   }
 
   &__copyright {

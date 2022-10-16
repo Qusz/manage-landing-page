@@ -125,6 +125,8 @@
 
     &__subscribe {
       grid-area: email;
+      display: flex;
+      flex-direction: column;
     }
 
     &__form {
@@ -138,13 +140,13 @@
       border-radius: 30px;
       width: 80%;
       
-        &::placeholder {
-          text-align: center;
-        }
-
         &:focus {
           outline: 3px solid $clr-accent;
         }
+    }
+
+    &__alert {
+      margin: .2rem 0 0 .8rem;
     }
 
     &__links-1 {
