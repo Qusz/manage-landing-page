@@ -7,15 +7,23 @@
   "license": "MIT",
   "scripts": {
     "compile": "sass --no-source-map ./src/sass/main.scss:./src/main.css",
-    "compile:watch": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css",
-    "start": "wds --node-resolve --open '/src/'",
-    "start:watch": "wds --node-resolve --watch --open '/src/'"
+    "serve": "wds --node-resolve --open '/src/'",
+    "prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o './src/main.css'",
+    "start": "npm-run-all -p compile prefixer serve",
+    "watch:compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css",
+    "watch:serve": "wds --node-resolve --watch --open '/src/'",
+    "watch:prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o './src/main.css' --watch",
+    "start-watch": "npm-run-all -p watch:*"
   },
   "dependencies": {
     "swiper": "^8.4.3"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.34",
+    "autoprefixer": "^10.4.12",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
     "sass": "^1.55.0"
   }
 }
