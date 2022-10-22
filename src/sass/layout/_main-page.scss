@@ -98,6 +98,10 @@
 
   text-align: center;
 
+    &__wrapper > * {
+      z-index: 3;
+    }
+
     &__header {
       margin-bottom: $spacer-m;
     }
