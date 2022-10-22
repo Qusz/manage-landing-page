@@ -7,12 +7,12 @@
   "license": "MIT",
   "scripts": {
     "compile": "sass --no-source-map ./src/sass/main.scss:./src/main.css",
-    "serve": "wds --node-resolve --open '/src/'",
-    "prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o './src/main.css'",
+    "serve": "wds --node-resolve --open \"/src/\"",
+    "prefixer": "postcss \"./src/main.css\" --use autoprefixer --no-map -o \"./src/main.css\"",
     "start": "npm-run-all -p compile prefixer serve",
     "watch:compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css",
-    "watch:serve": "wds --node-resolve --watch --open '/src/'",
-    "watch:prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o './src/main.css' --watch",
+    "watch:serve": "wds --node-resolve --watch --open \"/src/\"",
+    "watch:prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o \"./src/main.css\" --watch",
     "start-watch": "npm-run-all -p watch:*"
   },
   "dependencies": {
