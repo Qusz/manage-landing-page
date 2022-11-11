@@ -1,5 +1,5 @@
 # Introduction
-This is a mock landing page project I built to practice mobile-first approach, working with sliders and autoprefixer for PostCSS.
+This is a mock landing page project I built to practice mobile-first approach, working with sliders, autoprefixer for PostCSS and SASS + BEM.
 
 # Usage
 
@@ -8,4 +8,4 @@ This is a mock landing page project I built to practice mobile-first approach, w
 - Run `$ npm start`
 
 # Attribution
-The design was taken from this frontendmentor challenge https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5/hub/manage-landing-page-4AmJkARYlg
+The design was taken from this frontendmentor.io challenge https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5
