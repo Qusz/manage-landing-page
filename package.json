@@ -15,7 +15,7 @@
     "public:assets": "copyfiles -u 1 \"./src/assets/**/*\" public",
     "public": "npm-run-all --parallel public:*",
     "build": "npm-run-all public sass-compile postbuild",
-    "start": "npm-run-all -p public sass-compile serve",
+    "start": "npm-run-all public sass-compile serve",
     "start-watch": "npm-run-all -p public watch:*"
 
   },
