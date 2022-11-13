@@ -2,18 +2,23 @@
   "name": "manage-landing-page",
   "version": "1.0.0",
   "private": true,
-  "description": "",
   "author": "Qusz",
   "license": "MIT",
   "scripts": {
-    "compile": "sass --no-source-map ./src/sass/main.scss:./src/main.css",
+    "sass-compile": "sass --no-source-map ./src/sass/main.scss:public/main.css",
     "serve": "wds --node-resolve --open \"/src/\"",
-    "prefixer": "postcss \"./src/main.css\" --use autoprefixer --no-map -o \"./src/main.css\"",
+    "postbuild": "postcss \"public/main.css\" -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all -p compile prefixer serve",
-    "watch:compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css",
+    "watch:sass-compile": "sass --watch --no-source-map ./src/sass/main.scss:./src/main.css",
     "watch:serve": "wds --node-resolve --watch --open \"/src/\"",
     "watch:prefixer": "postcss './src/main.css' --use autoprefixer --no-map -o \"./src/main.css\" --watch",
-    "start-watch": "npm-run-all -p watch:*"
+    "start-watch": "npm-run-all -p watch:*",
+    "public:html": "copyfiles -u 1 \"./src/*.html\" public",
+    "public:js": "copyfiles -u 1 \"./src/*.js\" public",
+    "public:assets": "copyfiles -u 1 \"./src/assets/**/*\" public",
+    "public": "npm-run-all --parallel public:*",
+    "build": "npm-run-all public sass-compile postbuild"
+
   },
   "dependencies": {
     "swiper": "^8.4.3"
@@ -24,6 +29,8 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.14"
   }
 }
