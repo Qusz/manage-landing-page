@@ -3,6 +3,9 @@
 ## Introduction
 This is a mock landing page project I built to practice mobile-first approach, working with sliders, autoprefixer for PostCSS and SASS + BEM.
 
+## Live demo
+https://papaya-rugelach-03b970.netlify.app/
+
 ## Usage
 - Clone the repo
 - Run `$ npm install`
