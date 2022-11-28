@@ -7,7 +7,7 @@
   "scripts": {
     "sass-compile": "sass --no-source-map ./src/sass/main.scss:public/main.css",
     "serve": "wds --node-resolve --open \"/public/\"",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "postbuild": "postcss \"public/main.css\" -u autoprefixer cssnano -r --no-map",
     "watch:sass-compile": "sass --watch --no-source-map ./src/sass/main.scss:public/main.css",
     "watch:serve": "wds --node-resolve --watch --open \"/public/\"",
@@ -17,9 +17,9 @@
     "public": "npm-run-all --parallel public:*",
     "build": "npm-run-all public sass-compile postbuild netlify-copy-node",
     "start": "npm-run-all public sass-compile serve",
-    "start-watch": "npm-run-all -p public watch:*",
-    "netlify-copy-node": "rm -rf public && mkdir public && rsync -rv * public --exclude ./public"
+    "start-watch": "npm-run-all -p public watch:*"
   },
+  "type": "module",
   "dependencies": {
     "swiper": "^8.4.3"
   },
@@ -29,6 +29,7 @@
     "copyfiles": "^2.4.1",
     "cssnano": "^5.1.14",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",

@@ -2,19 +2,15 @@ import Swiper from 'swiper/bundle';
 
 class Navbar {
   constructor() {
-
     this.hamburger = document.querySelector('.navbar__hamburger');
     this.veil = document.querySelector('.veil');
     this.navbar = document.querySelector('.navbar__items');
-
   }
 
   toggleNav() {
-
     this.hamburger.classList.toggle('is-active');
     this.veil.classList.toggle('is-active');
     this.navbar.classList.toggle('is-active');
-
   }
 }
 
@@ -24,31 +20,26 @@ class Slider {
   }
 
   initSwiper() {
-
     try {
       this.swiper = new Swiper(".feedback__slider", {
         pagination: {
           el: ".swiper-pagination",
-        },
+        }
       });
     } catch(error) {
       console.log(error);
     }
-
   }
 
   destroySwiper() {
-
     try {
       this.swiper.destroy();
     } catch(error) {
       console.log(error);
     }
-
   }
 
   validateSwiper() {
-
     try {
       switch(true) {
         case window.innerWidth < 1024 && this.swiper === undefined:
@@ -62,11 +53,9 @@ class Slider {
     } catch(error) {
       console.log(error);
     }
-
   }
 
   removeContainer() {
-
     try {
       switch(true) {
         case window.innerWidth > 1024:
@@ -79,18 +68,16 @@ class Slider {
     } catch(error) {
       console.log(error);
     }
-
   }
 }
 
 
 
-//* ============
-//* Main
-//* ============
+main();
 
-(() => {
 
+
+function main() {
   //* Hamburger menu
   try {
     const navbar = new Navbar();
@@ -126,7 +113,6 @@ class Slider {
 
   //* Email validation
   try {
-
     const emailField = document.querySelector('.footer__email');
     let alert = null;
 
@@ -136,7 +122,6 @@ class Slider {
     });
 
     emailField.addEventListener('invalid', (e) => {
-
       // Make sure there's only 1 alert at a time
       if (document.querySelector('.footer__alert')) {
         e.preventDefault();
@@ -164,5 +149,6 @@ class Slider {
   } catch(error) {
     console.log(error);
   }
+}
 
-})();
+export { Navbar, Slider, main };
