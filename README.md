@@ -4,7 +4,7 @@
 This is a mock landing page project I built to practice mobile-first approach, working with sliders, autoprefixer for PostCSS and SASS + BEM.
 
 ## Live demo
-https://papaya-rugelach-03b970.netlify.app/
+https://manage-landing-page-liard-psi.vercel.app/
 
 ## Usage
 - Clone the repo
