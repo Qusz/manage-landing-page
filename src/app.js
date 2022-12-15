@@ -2,15 +2,18 @@ import Swiper from 'swiper/bundle';
 
 class Navbar {
   constructor() {
-    this.hamburger = document.querySelector('.navbar__hamburger');
-    this.veil = document.querySelector('.veil');
-    this.navbar = document.querySelector('.navbar__items');
+    this.activeClass = 'is-active';
+    this.refs = {
+      hamburger: document.querySelector('.navbar__hamburger'),
+      veil: document.querySelector('.veil'),
+      navbar: document.querySelector('.navbar__items')
+    }
   }
 
   toggleNav() {
-    this.hamburger.classList.toggle('is-active');
-    this.veil.classList.toggle('is-active');
-    this.navbar.classList.toggle('is-active');
+    for (const element in this.refs) {
+      this.refs[element].classList.toggle(this.activeClass);
+    }
   }
 }
 
@@ -81,7 +84,7 @@ function main() {
   //* Hamburger menu
   try {
     const navbar = new Navbar();
-    navbar.hamburger.addEventListener('click', () => {
+    navbar.refs.hamburger.addEventListener('click', () => {
       navbar.toggleNav();
     });
   
