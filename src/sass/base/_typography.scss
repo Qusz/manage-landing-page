@@ -1,4 +1,5 @@
 @use './colors' as *;
+@use './fonts' as *;
 
 $fs-xl: 2.7rem;
 $fs-l: 2.3rem;
@@ -6,10 +7,6 @@ $fs-m: 1.5rem;
 $fs-s: 1rem;
 $fs-xs: .9rem;
 $fs-xxs: .8rem;
-
-$ff-400: 'Vietnam-400';
-$ff-500: 'Vietnam-500';
-$ff-700: 'Vietnam-700';
 
 
 
@@ -20,40 +17,45 @@ $ff-700: 'Vietnam-700';
 
 .product {
   &__title {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-m;
     color: $clr-primary;
+    font-weight: 700;
   }
 
   &__desc {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-s;
     color: $clr-neutral-blue--light;
     line-height: 1.7;
+    font-weight: 400;
   }
 }
 
 .feedback {
   &__header {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-m;
     color: $clr-primary;
+    font-weight: 700;
   }
 }
 
 .cta {
   &__header {
-    font-family: $ff-500;
+    font-family: $ff-vietnam;
     font-size: $fs-l;
-    color: $clr-neutral-white; 
+    color: $clr-neutral-white;
+    font-weight: 500; 
   }
 }
 
 .footer {
   &__link {
-    font-family: $ff-500;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     color: $clr-neutral-white;
+    font-weight: 500;
 
       a {
         cursor: pointer;
@@ -67,22 +69,25 @@ $ff-700: 'Vietnam-700';
   }
 
   &__email {
-    font-family: $ff-500;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     color: $clr-primary;
+    font-weight: 500;
   }
 
   &__alert {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-xxs;
     color: $clr-alert;
     font-style: italic;
+    font-weight: 400;
   }
 
   &__copyright {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     color: $clr-neutral-blue--light;
+    font-weight: 400;
   }
 }
 
@@ -94,64 +99,75 @@ $ff-700: 'Vietnam-700';
 
 .navbar {
   &__items {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-s;
     color: $clr-primary;
+    font-weight: 700;
   }
 }
 
 .btn {
-  font-family: $ff-500;
+  font-family: $ff-vietnam;
   font-size: $fs-s;
+  font-weight: 500;
 }
+
 
 .card-main {
   &__title {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-l;
     color: $clr-primary;
+    font-weight: 700;
   }
 
   &__body {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-s;
     color: $clr-neutral-blue--light;
     line-height: 1.7;
+    font-weight: 400;
   }
 }
 
 .card-list {
   &__title {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-s;
     color: $clr-primary;
+    font-weight: 700;
   }
 
   &__number {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     color: $clr-neutral-white;
+    font-weight: 700;
   }
 
   &__body {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     line-height: 1.9; 
     color: $clr-neutral-blue--light;
+    font-weight: 400;
   }
 }
 
 .card-feedback {
   &__username {
-    font-family: $ff-700;
+    font-family: $ff-vietnam;
     font-size: $fs-s;
     color: $clr-primary;
+    font-weight: 700;
   }
 
   &__body {
-    font-family: $ff-400;
+    font-family: $ff-vietnam;
     font-size: $fs-xs;
     color: $clr-neutral-blue--light;
+    font-weight: 400;
+
   }
 }
 
@@ -162,7 +178,6 @@ $ff-700: 'Vietnam-700';
 //* ================
 
 @media screen and (min-width: 1024px) {
-
   .card-main {
     &__title {
       font-size: $fs-xl;

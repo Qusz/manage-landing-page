@@ -1,14 +1,19 @@
 @font-face {
-  font-family: 'Vietnam-400';
+  font-family: 'Vietnam';
+  font-weight: '400';
   src: url('./assets/fonts/BeVietnamPro-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Vietnam-500';
+  font-family: 'Vietnam';
+  font-weight: '500';
   src: url('./assets/fonts/BeVietnamPro-Medium.ttf');
 }
 
 @font-face {
-  font-family: 'Vietnam-700';
+  font-family: 'Vietnam';
+  font-weight: '600';
   src: url('./assets/fonts/BeVietnamPro-Bold.ttf');
 }
+
+$ff-vietnam: 'Vietnam';

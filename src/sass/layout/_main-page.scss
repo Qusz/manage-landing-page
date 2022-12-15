@@ -1,27 +1,11 @@
 @use '../base/' as *;
 
 
-// This is so that background blobs don't cause horizontal scrolling
+// So that background blobs don't cause horizontal scrolling
 .main {
   position: relative;
   overflow: hidden;
 }
-
-
-
-//* ================
-//* Navbar
-//* ================
-
-.navbar {
-  margin-top: $spacer-m;
-}
-
-
-
-//* ================
-//* Hero
-//* ================
 
 .hero {
   margin-top: $spacer-m;
@@ -32,23 +16,11 @@
   gap: $spacer-xs;
 }
 
-
-
-//* ================
-//* Product
-//* ================
-
 .product {
   margin-top: $spacer-xxl;
 
-
     &__header {
       text-align: center;
-      margin-bottom: $spacer-m;
-    }
-
-    &__desc {
-      margin-top: $spacer-xs;
     }
 
     &__cards {
@@ -78,7 +50,6 @@
 
     &__button {
       align-self: center;
-      margin-bottom: $spacer-m;
     }
 }
 
@@ -93,6 +64,8 @@
   position: relative;
   overflow: hidden;
 
+  margin-top: $spacer-m;
+
   background-color: $clr-accent;
   padding-block: $spacer-xl;
 
@@ -100,10 +73,6 @@
 
     &__wrapper > * {
       z-index: 3;
-    }
-
-    &__header {
-      margin-bottom: $spacer-m;
     }
 }
 
@@ -212,7 +181,7 @@
   position: absolute;
 
     &__top {
-      background-image: url('/assets/img/bg-tablet-pattern.svg');
+      background-image: url('./assets/img/bg-tablet-pattern.svg');
       z-index: -1;
       width: 600px;
       height: 600px;
@@ -222,7 +191,7 @@
     }
 
     &__hero {
-      background-image: url('/assets/img/bg-tablet-pattern.svg');
+      background-image: url('./assets/img/bg-tablet-pattern.svg');
       z-index: -1;
       width: 300px;
       height: 300px;
@@ -232,7 +201,7 @@
     }
 
     &__cta {
-      background-image: url('/assets/img/bg-simplify-section-mobile.svg');
+      background-image: url('./assets/img/bg-simplify-section-mobile.svg');
       width: 350px;
       height: 350px;
       z-index: 2;
@@ -249,7 +218,6 @@
 //* ================
 
 @media screen and (min-width: 1024px) {
-
   .hero {
     margin-top: $spacer-xl;
     flex-direction: row;
@@ -339,7 +307,7 @@
     }
 
     &__cta {
-      background-image: url('/assets/img/bg-simplify-section-desktop.svg');
+      background-image: url('./assets/img/bg-simplify-section-desktop.svg');
       width: 1800px;
       height: 1800px;
 
