@@ -23,17 +23,17 @@ describe('Navbar test', () => {
   });
   
   it('Should select appropriate classes', () => {
-    expect(navbar.hamburger.classList.contains('navbar__hamburger')).toBe(true);
-    expect(navbar.hamburger).toBeTruthy();
-    expect(navbar.veil.classList.contains('veil')).toBe(true);
-    expect(navbar.navbar.classList.contains('navbar__items')).toBe(true);
+    expect(navbar.refs.hamburger.classList.contains('navbar__hamburger')).toBe(true);
+    expect(navbar.refs.hamburger).toBeTruthy();
+    expect(navbar.refs.veil.classList.contains('veil')).toBe(true);
+    expect(navbar.refs.navbar.classList.contains('navbar__items')).toBe(true);
   });
 
   it('Should toggle is-active class', () => {
     navbar.toggleNav();
-    expect(navbar.hamburger.classList.contains('is-active')).toBe(true);
-    expect(navbar.veil.classList.contains('is-active')).toBe(true);
-    expect(navbar.navbar.classList.contains('is-active')).toBe(true);
+    expect(navbar.refs.hamburger.classList.contains('is-active')).toBe(true);
+    expect(navbar.refs.veil.classList.contains('is-active')).toBe(true);
+    expect(navbar.refs.navbar.classList.contains('is-active')).toBe(true);
   })
 });
 
@@ -100,27 +100,27 @@ describe('Events test', () => {
   it('Should toggle mobile menu on click', () => {
     window.innerWidth = 768;
 
-    navbar.hamburger.click();
-    expect(navbar.hamburger.classList.contains('is-active')).toBe(true);
-    expect(navbar.veil.classList.contains('is-active')).toBe(true);
-    expect(navbar.navbar.classList.contains('is-active')).toBe(true);
+    navbar.refs.hamburger.click();
+    expect(navbar.refs.hamburger.classList.contains('is-active')).toBe(true);
+    expect(navbar.refs.veil.classList.contains('is-active')).toBe(true);
+    expect(navbar.refs.navbar.classList.contains('is-active')).toBe(true);
 
-    navbar.hamburger.click();
-    expect(navbar.hamburger.classList.contains('is-active')).toBe(false);
-    expect(navbar.veil.classList.contains('is-active')).toBe(false);
-    expect(navbar.navbar.classList.contains('is-active')).toBe(false);
+    navbar.refs.hamburger.click();
+    expect(navbar.refs.hamburger.classList.contains('is-active')).toBe(false);
+    expect(navbar.refs.veil.classList.contains('is-active')).toBe(false);
+    expect(navbar.refs.navbar.classList.contains('is-active')).toBe(false);
   });
 
   it('Should close mobile menu on click on any outside area', () => {
     window.innerWidth = 768;
 
-    navbar.hamburger.click();
-    expect(navbar.veil.classList.contains('is-active')).toBe(true);
+    navbar.refs.hamburger.click();
+    expect(navbar.refs.veil.classList.contains('is-active')).toBe(true);
 
-    navbar.veil.click();
-    expect(navbar.hamburger.classList.contains('is-active')).toBe(false);
-    expect(navbar.veil.classList.contains('is-active')).toBe(false);
-    expect(navbar.navbar.classList.contains('is-active')).toBe(false);
+    navbar.refs.veil.click();
+    expect(navbar.refs.hamburger.classList.contains('is-active')).toBe(false);
+    expect(navbar.refs.veil.classList.contains('is-active')).toBe(false);
+    expect(navbar.refs.navbar.classList.contains('is-active')).toBe(false);
   });
 
   it('Should kill swiper on big screens on DOMContentLoad', () => {
