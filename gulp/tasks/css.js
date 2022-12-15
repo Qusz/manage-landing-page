@@ -3,6 +3,7 @@ import conf from '../gulpconfig.js';
 
 import gulpSass from 'gulp-sass';
 import sassImport from 'sass';
+
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
 
@@ -35,4 +36,3 @@ export function cssDev() {
       .pipe(gulp.dest(conf.dest.public))
       .pipe(conf.require.browsersync.stream());
 }
-

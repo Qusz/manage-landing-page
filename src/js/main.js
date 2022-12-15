@@ -1,4 +1,4 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/swiper-bundle';
 
 class Navbar {
   constructor() {

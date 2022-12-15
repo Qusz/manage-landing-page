@@ -3,7 +3,7 @@
  */
 
 import { expect, jest, it } from '@jest/globals';
-import { Navbar, Slider, main } from '../src/app.js';
+import { Navbar, Slider, main } from '../src/js/main.js';
 
 
 beforeEach(() => {

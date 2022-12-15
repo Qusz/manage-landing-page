@@ -1,13 +1,12 @@
 import gulp from 'gulp';
-
 import conf from '../gulpconfig.js';
 
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 import rollup from 'gulp-better-rollup';
-import babel from '@rollup/plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import depsOrder from 'gulp-deps-order';
 
 
