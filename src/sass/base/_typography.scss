@@ -133,9 +133,9 @@ $fs-xxs: .8rem;
 .card-list {
   &__title {
     font-family: $ff-vietnam;
-    font-size: $fs-s;
+    font-size: $fs-xs;
     color: $clr-primary;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   &__number {
@@ -186,6 +186,11 @@ $fs-xxs: .8rem;
   }
 
   .card-list {
+    &__title {
+      font-weight: 700;
+      font-size: $fs-s;
+    }
+
     &__number {
       font-size: $fs-s;
     }

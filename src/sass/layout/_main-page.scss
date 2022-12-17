@@ -18,9 +18,16 @@
 
 .product {
   margin-top: $spacer-xxl;
+  
+  display: flex;
+  flex-direction: column;
+  gap: $spacer-m;
 
     &__header {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: $spacer-s;
     }
 
     &__cards {
@@ -71,8 +78,24 @@
 
   text-align: center;
 
-    &__wrapper > * {
-      z-index: 3;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacer-m;
+
+        & > * {
+          position: relative;
+          z-index: 3;
+        }
+
+    }
+
+
+    &__button {
+      // margin: $spacer-m;
+
+      
     }
 }
 
@@ -234,8 +257,9 @@
   }
 
   .product {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 0;
 
       &__header {
         width: 35%;
@@ -259,7 +283,7 @@
     text-align: left;
 
       &__wrapper {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
       }
