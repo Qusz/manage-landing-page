@@ -13,6 +13,12 @@ class Navbar {
   toggleNav() {
     for (const element in this.refs) {
       this.refs[element].classList.toggle(this.activeClass);
+
+      if (document.body.style.overflowY === 'hidden') {
+        document.body.style.overflowY = '';
+      } else {
+        document.body.style.overflowY = 'hidden';
+      }
     }
   }
 }
