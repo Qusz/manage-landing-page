@@ -18,7 +18,7 @@
 
 .product {
   margin-top: $spacer-xxl;
-  
+
   display: flex;
   flex-direction: column;
   gap: $spacer-m;
@@ -89,13 +89,6 @@
           z-index: 3;
         }
 
-    }
-
-
-    &__button {
-      // margin: $spacer-m;
-
-      
     }
 }
 
